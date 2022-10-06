@@ -34,15 +34,8 @@ vim.opt.colorcolumn="80"
 vim.opt.cursorline = true
 vim.opt.clipboard="unnamedplus"
 
---call plug#begin('~/vimfiles/plugged')
---Plug 'nvim-telescope/telescope.nvim'
---Plug 'gruvbox-community/gruvbox'
---Plug 'ycm-core/YouCompleteMe'
---call plug#end()
-
---colorscheme gruvbox
---highlight Normal guibg=none
+-- Neovide specific
+vim.g.neovide_cursor_vfx_mode = "pixiedust" 
 
 vim.mapleader = " "
---vim.cmd "colorscheme = gruvbox"
 --nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
