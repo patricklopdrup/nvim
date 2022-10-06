@@ -36,6 +36,8 @@ vim.opt.clipboard="unnamedplus"
 
 -- Neovide specific
 vim.g.neovide_cursor_vfx_mode = "pixiedust" 
+vim.g.neovide_fullscreen = true
+vim.g.neovide_remember_window_size = true
 
 vim.mapleader = " "
 --nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
