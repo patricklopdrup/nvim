@@ -35,7 +35,7 @@ vim.opt.cursorline = true
 vim.opt.clipboard="unnamedplus"
 
 -- Neovide specific
-vim.g.neovide_cursor_vfx_mode = "pixiedust" 
+vim.g.neovide_cursor_vfx_mode = "pixiedust"
 vim.g.neovide_cursor_vfx_particle_density = 40.0
 vim.g.neovide_cursor_vfx_particle_curl=5.0
 vim.g.neovide_fullscreen = true

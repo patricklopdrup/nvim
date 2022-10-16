@@ -53,3 +53,6 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- Telescope -- 
 keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts) -- (ripgrep has to be installed) scoop install ripgrep
+
+-- Markdown preview
+keymap("n", "<F4>", "<cmd>MarkdownPreviewToggle<cr>", opts)

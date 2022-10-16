@@ -71,7 +71,13 @@ return packer.startup(function(use)
     -- Telescope
     use "nvim-telescope/telescope.nvim"
     use "nvim-telescope/telescope-media-files.nvim"
-    
+
+    -- Markdown preview
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
+
     -- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
