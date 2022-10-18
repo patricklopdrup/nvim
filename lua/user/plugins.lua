@@ -68,6 +68,9 @@ return packer.startup(function(use)
     use "L3MON4D3/LuaSnip"              -- Snippet engine
     use "rafamadriz/friendly-snippets"  -- A bunch of snippets to use
 
+    -- Comments
+    use "tpope/vim-commentary"
+
     -- Telescope
     use "nvim-telescope/telescope.nvim"
     use "nvim-telescope/telescope-media-files.nvim"
