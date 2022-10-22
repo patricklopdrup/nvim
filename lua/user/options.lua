@@ -3,7 +3,8 @@ vim.opt.langmenu = en_US
 vim.cmd "let $LANG = 'en_US'"
 
 vim.opt.mouse="a"
-vim.opt.tabstop=4 softtabstop=4 
+vim.opt.tabstop=4
+vim.opt.softtabstop=4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
@@ -38,7 +39,7 @@ vim.opt.clipboard="unnamedplus"
 vim.g.neovide_cursor_vfx_mode = "pixiedust"
 vim.g.neovide_cursor_vfx_particle_density = 40.0
 vim.g.neovide_cursor_vfx_particle_curl=5.0
-vim.g.neovide_fullscreen = true
+vim.g.neovide_fullscreen = false
 vim.g.neovide_remember_window_size = true
 
 vim.mapleader = " "
