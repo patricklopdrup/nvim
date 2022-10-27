@@ -1,5 +1,5 @@
 -- Language
-vim.opt.langmenu = en_US
+vim.opt.langmenu = "en_US.utf8"
 vim.cmd "let $LANG = 'en_US'"
 
 vim.opt.mouse="a"
