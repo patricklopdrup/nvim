@@ -35,12 +35,6 @@ vim.opt.colorcolumn="80"
 vim.opt.cursorline = true
 vim.opt.clipboard="unnamedplus"
 
--- Neovide specific
-vim.g.neovide_cursor_vfx_mode = "pixiedust"
-vim.g.neovide_cursor_vfx_particle_density = 40.0
-vim.g.neovide_cursor_vfx_particle_curl=5.0
-vim.g.neovide_fullscreen = false
-vim.g.neovide_remember_window_size = true
 
 vim.mapleader = " "
 --nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
