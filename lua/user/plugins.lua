@@ -75,6 +75,13 @@ return packer.startup(function(use)
     use "nvim-telescope/telescope.nvim"
     use "nvim-telescope/telescope-media-files.nvim"
 
+    -- Treesitter
+    use {
+        "nvim-treesitter/nvim-treesitter",
+        run = ":TSUpdate",
+    }
+    use "p00f/nvim-ts-rainbow"
+
     -- Markdown preview
     use({
         "iamcco/markdown-preview.nvim",
