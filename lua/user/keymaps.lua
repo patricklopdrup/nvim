@@ -54,5 +54,10 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts) -- (ripgrep has to be installed) scoop install ripgrep
 
+-- Gitsigns
+keymap("n", "<leader>gb", "<cmd>Gitsigns blame_line<cr>", opts)
+keymap("n", "<leader>gr", "<cmd>Gitsigns reset_hunk<cr>", opts)
+keymap("n", "<leader>gs", "<cmd>Gitsigns preview_hunk<cr>", opts)
+
 -- Markdown preview
 keymap("n", "<F4>", "<cmd>MarkdownPreviewToggle<cr>", opts)

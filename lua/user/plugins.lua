@@ -85,6 +85,9 @@ return packer.startup(function(use)
     }
     use "p00f/nvim-ts-rainbow"
 
+    -- Gitsigns
+    use "lewis6991/gitsigns.nvim"
+
     -- Markdown preview
     use({
         "iamcco/markdown-preview.nvim",
