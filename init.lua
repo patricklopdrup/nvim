@@ -1,3 +1,7 @@
 require "plh.plugin"
+require "plh.lsp"
 require "plh.options"
+require "plh.keymaps"
 require "plh.colorscheme"
+require "plh.telescope"
+require "plh.gitsigns"
