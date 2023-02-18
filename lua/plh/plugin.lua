@@ -49,6 +49,11 @@ require("lazy").setup({
         }
     },
 
+    {
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
+    },
+
     -- Git signs
     'lewis6991/gitsigns.nvim',
 
