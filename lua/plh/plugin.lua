@@ -17,6 +17,7 @@ require("lazy").setup({
     -- Colorschemes
 	"catppuccin/vim",
     "rose-pine/neovim",
+    "folke/tokyonight.nvim",
 
     -- Telescope
     {
