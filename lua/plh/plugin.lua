@@ -63,6 +63,12 @@ require("lazy").setup({
         dependencies = {
             'nvim-tree/nvim-web-devicons', -- optional, for file icons
         },
+    },
+
+    -- Status line
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-web-devicons', lazy = true }
     }
 
 })
