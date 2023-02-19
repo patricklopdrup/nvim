@@ -57,5 +57,13 @@ require("lazy").setup({
     -- Git signs
     'lewis6991/gitsigns.nvim',
 
+    -- Nvim tree
+    {
+        'nvim-tree/nvim-tree.lua',
+        dependencies = {
+            'nvim-tree/nvim-web-devicons', -- optional, for file icons
+        },
+    }
+
 })
 

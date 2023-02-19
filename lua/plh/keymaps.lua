@@ -1,7 +1,5 @@
 local opts = { noremap = true, silent = true }
 
-local term_opts =  { silent = true }
-
 -- shorten function name
 local keymap = vim.api.nvim_set_keymap
 
@@ -43,4 +41,5 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts) -- (ripgrep has to be installed) scoop install ripgrep
 
-
+-- Nvim tree --
+keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
