@@ -77,5 +77,11 @@ require("lazy").setup({
     -- Comment
     "tpope/vim-commentary",
 
+    -- Startup screen
+    {
+        "goolord/alpha-nvim",
+        dependencies = "nvim-tree/nvim-web-devicons"
+    },
+
 })
 
