@@ -40,6 +40,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- Telescope -- 
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts) -- (ripgrep has to be installed) scoop install ripgrep
+keymap("n", "gf", "<cmd>Telescope lsp_document_symbols symbols=function<cr>", opts) -- (ripgrep has to be installed) scoop install ripgrep
 
 -- Nvim tree --
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
