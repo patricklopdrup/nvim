@@ -69,7 +69,10 @@ require("lazy").setup({
     {
         'nvim-lualine/lualine.nvim',
         dependencies = { 'nvim-web-devicons', lazy = true }
-    }
+    },
+
+    -- Terminal
+    "akinsho/toggleterm.nvim"
 
 })
 
