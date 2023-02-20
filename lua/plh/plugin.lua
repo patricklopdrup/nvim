@@ -72,7 +72,10 @@ require("lazy").setup({
     },
 
     -- Terminal
-    "akinsho/toggleterm.nvim"
+    "akinsho/toggleterm.nvim",
+
+    -- Comment
+    "tpope/vim-commentary",
 
 })
 
