@@ -44,3 +44,6 @@ keymap("n", "gf", "<cmd>Telescope lsp_document_symbols symbols=function<cr>", op
 
 -- Nvim tree --
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+
+-- Toggle term
+keymap("n", "<f5>", "<cmd>lua RUN_FILE()<cr>", opts)

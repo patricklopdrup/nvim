@@ -34,8 +34,27 @@ vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 local Terminal = require("toggleterm.terminal").Terminal
 
-local python = Terminal:new({ cmd = "python", hidden = true })
+-- Command for running current file
+function RUN_FILE()
+    local current_file = vim.fn.expand('%:p')
+    local extension = vim.fn.expand('%:e')
+    local command = ''
 
-function _PYTHON_TOGGLE()
-	python:toggle()
+    if extension == 'rs' then
+        command = 'cargo run'
+    elseif extension == 'py' then
+        command = 'python "' .. current_file .. '"'
+    elseif extension == 'lua' then
+        command = 'lua "' .. current_file .. '"'
+    else
+        print('Unsupported file type: ' .. extension)
+        return
+    end
+
+    Terminal:new({
+        cmd = command,
+        hidden = false,
+        direction = 'horizontal',
+        close_on_exit = false,
+    }):toggle()
 end
