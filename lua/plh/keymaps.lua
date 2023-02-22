@@ -50,5 +50,57 @@ keymap("n", "<leader>gs", "<cmd>Gitsigns preview_hunk<cr>", opts)
 -- Nvim tree --
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
--- Toggle term
+-- Toggle term --
 keymap("n", "<f5>", "<cmd>lua RUN_FILE()<cr>", opts)
+
+-- Debug --
+vim.cmd([[
+nmap <F9> <cmd>call vimspector#Launch()<cr>
+nmap <F10> <cmd>call vimspector#StepOver()<cr>
+nmap <F8> <cmd>call vimspector#Reset()<cr>
+nmap <F11> <cmd>call vimspector#StepInto()<cr>
+nmap <F12> <cmd>call vimspector#StepOut()<cr>
+]])
+
+keymap('n', "Db", ":call vimspector#ToggleBreakpoint()<cr>", opts)
+keymap('n', "Dw", ":call vimspector#AddWatch()<cr>", opts)
+keymap('n', "De", ":call vimspector#Evaluate()<cr>", opts)
+
+keymap("n", "Dt", ":lua debug_rust()<cr>", opts) -- test for now!
+function debug_rust()
+    -- local root_dir = vim.fs.dirname(".git")
+    local root_dir = vim.fn.fnamemodify(vim.fn.getcwd(), ":h")
+    local root_dir_path = vim.fn.fnamemodify(
+                            vim.fn.finddir(".git", root_dir), ":p")
+
+    local vimspector_config_file = root_dir .. "/.vimspector.json"
+
+    if not vim.fn.filereadable(vimspector_config_file) == 1 then
+        -- the file does NOT exist
+        print("not found")
+        -- create the file
+    end
+
+    -- run the vimspector#Launch
+end
+
+-- Create a .vimspector config file
+local current_file_name = vim.fn.fnamemodify(vim.fn.bufname("%"), ":t")
+local current_project_name = "" -- get name of project
+local data = {
+    configurations = {
+        launch = {
+            adapter = "CodeLLDB",
+            filetypes = { "rust" },
+            configuration = {
+                request = "launch",
+                program = "${workspaceRoot}/targer/debug/" .. current_project_name
+            }
+        }
+    }
+}
+
+local function create_vimspector_file()
+    local json_data = require("json").encode(data)
+    print(json_data)
+end

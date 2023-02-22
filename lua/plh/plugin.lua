@@ -83,5 +83,11 @@ require("lazy").setup({
         dependencies = "nvim-tree/nvim-web-devicons"
     },
 
+    -- rust-tools
+    "simrat39/rust-tools.nvim",
+    -- debug
+    "mfussenegger/nvim-dap",
+    "puremourning/vimspector",
+
 })
 
