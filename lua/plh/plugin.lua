@@ -84,6 +84,14 @@ require("lazy").setup({
         dependencies = "nvim-tree/nvim-web-devicons"
     },
 
+    -- Autopairs
+    {
+        "windwp/nvim-autopairs",
+        config = function ()
+            require("nvim-autopairs").setup{}
+        end
+    },
+
     -- rust-tools
     "simrat39/rust-tools.nvim",
     -- debug
