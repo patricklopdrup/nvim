@@ -18,6 +18,7 @@ require("lazy").setup({
 	"catppuccin/vim",
     "rose-pine/neovim",
     "folke/tokyonight.nvim",
+    "AlexvZyl/nordic.nvim",
 
     -- Telescope
     {
