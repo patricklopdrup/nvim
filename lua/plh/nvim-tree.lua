@@ -13,9 +13,7 @@ require("nvim-tree").setup({
   view = {
     width = 30,
     mappings = {
-      on_attach = {
-        { key = "u", action = "dir_up" },
-      },
+
     },
   },
   renderer = {
